@@ -17,7 +17,7 @@ jobs:
 
       - id: "delete-existing"
         name: "Eliminar servicios Existentes"
-        run: gcloud run services delete api
+        run: gcloud run services delete api --region us-central1 --quiet || true
 
       - id: deploy
         name: "Deploy to GCP"
